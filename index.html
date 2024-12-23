@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Регистрация</h1>
+        <form name="formRegistration" class="form" id="form_registration" novalidate>
+            <div class="input-box">
+                <label for="name" class="form_label"></label>
+                <input type="text" name="name" id="name" class="form_input" placeholder="Имя" required>
+                <p class="err none"></p>
+            </div>
+            <div class="input-box">
+                <label for="email" class="form_label"></label>
+                <input type="email" name="email" id="email" class="form_input" placeholder="Электронная почта" required>
+                <p class="err none"></p>
+            </div>
+            <div class="input-box">
+                <label for="age" class="form_label"></label>
+                <input type="number" name="age" id="age" class="form_input" placeholder="Возраст" required>
+                <p class="err none"></p>
+            </div>
+            <div class="radio">
+                <input type="radio" name="sex" id="man">
+                <label for="man">Мужчина</label>
+                <input type="radio" name="sex" id="woman">
+                <label for="woman">Женщина</label>
+            </div>
+            <div>
+                <select name="prof" id="prof" class="form_select" required>
+                    <option value="">Ваша профессия</option>
+                    <option value="Врач">Врач</option>
+                    <option value="Программист">Программист</option>
+                    <option value="Учитель">Учитель</option>
+                    <option value="Дизайнер">Дизайнер</option>
+                    <option value="Инженер">Инженер</option>
+                    <option value="Продавец">Продавец</option>
+                </select>
+                <p class="err none"></p>
+            </div>
+            <div class="input-box">
+                <label for="password" class="form_label"></label>
+                <input type="password" name="password" id="password" class="form_input" minlength="8" placeholder="Пароль" pattern='A(?=[-_a-zA-Z0-9]*?[A-Z])(?=[-_a-zA-Z0-9]*?[a-z])(?=[-_a-zA-Z0-9]*?[0-9])[-_a-zA-Z0-9]{8,}z' required>
+                <p class="err none"></p>
+            </div>
+            <div class="checkbox_box">
+                <input type="checkbox" name="checkbox" id="checkbox" class="form_checkbox" required>
+                <label for="checkbox">Согласен с обработкой персональных данных</label>
+                <p class="err none"></p>
+            </div>
+            <input type="submit" value="Отправить" name="button" id="submit" class="form_submit" disabled>
+        </form>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
